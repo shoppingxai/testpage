@@ -1,129 +1,163 @@
-
 <!DOCTYPE html>
-<html lang="auto">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ShoppingxAI - Pure AI. Smarter Shopping.</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShoppingxAI - Your AI Shopping Assistant</title>
   <style>
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-      background-color: #fff;
-      color: #000;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     header {
+      width: 100%;
+      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid #ddd;
     }
     .logo {
       font-size: 1.5rem;
       font-weight: bold;
     }
-    .nav {
-      display: flex;
-      gap: 2rem;
-      font-size: 0.95rem;
+    .logo .blue {
+      color: #007BFF;
     }
-    .lang-switch {
-      display: flex;
-      gap: 0.5rem;
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #222;
     }
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 4rem;
+    nav select {
+      padding: 4px;
+      margin-left: 1rem;
+    }
+    main {
       text-align: center;
-    }
-    .hero h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+      padding: 3rem 1rem;
+      max-width: 900px;
     }
     .search-box {
-      margin-top: 1rem;
-      width: 60%;
-      max-width: 600px;
+      margin-top: 1.5rem;
     }
     .search-box input {
-      width: 100%;
-      padding: 1rem;
+      padding: 0.5rem;
+      width: 250px;
       font-size: 1rem;
-      border-radius: 8px;
-      border: 1px solid #ccc;
     }
-    .products {
-      padding: 3rem 2rem;
+    .search-box button {
+      padding: 0.55rem 1rem;
+      margin-left: 0.5rem;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
     }
-    .section-title {
-      font-size: 1.25rem;
+    .launch-msg {
+      margin-top: 2rem;
+      color: red;
+      font-weight: bold;
+    }
+    .features {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 3rem;
+    }
+    .feature {
+      text-align: center;
+      width: 250px;
+      margin: 1rem;
+    }
+    .feature img {
+      height: 40px;
       margin-bottom: 1rem;
     }
-    .product-grid {
+    .pro {
+      margin-top: 3rem;
       display: flex;
       flex-wrap: wrap;
-      gap: 1.5rem;
+      justify-content: space-around;
+      gap: 2rem;
     }
-    .product-card {
-      width: 150px;
-      border: 1px solid #eee;
-      border-radius: 12px;
-      padding: 1rem;
-      text-align: center;
-      font-size: 0.9rem;
+    .pro-box {
+      background: #f8f8f8;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      max-width: 350px;
     }
     footer {
-      text-align: center;
+      margin-top: 4rem;
       padding: 2rem;
-      color: #888;
-      font-size: 0.8rem;
+      font-size: 0.9rem;
+      color: #666;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">ShoppingxAI</div>
-    <nav class="nav">
-      <div>AI推荐<br>AI Suggestions<br>Recommandation IA</div>
-      <div>价格趋势<br>Price Trends<br>Tendances de prix</div>
-      <div>愿购易得<br>Smart Purchase<br>Achetez malin</div>
+    <div class="logo"><span class="blue">SHOPPING x AI</span></div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Features</a>
+      <a href="#">Pricing</a>
+      <a href="#">Log In</a>
+      <select id="lang-switch">
+        <option>English</option>
+        <option>中文</option>
+        <option>Français</option>
+      </select>
     </nav>
-    <div class="lang-switch">
-      <button>中</button>
-      <button>EN</button>
-      <button>FR</button>
-    </div>
   </header>
 
-  <div class="hero">
-    <h1>纯AI引擎，做你的购物大脑<br>Pure AI. Smarter Shopping.<br>Moteur IA pur, achats plus intelligents.</h1>
+  <main>
+    <h1>The AI-Powered Shopping Assistant</h1>
+    <p>Find the products you need with ease.</p>
     <div class="search-box">
-      <input type="text" placeholder="我想买运动鞋 | I want running shoes | Je veux des chaussures de sport">
+      <input type="text" placeholder="Ask anything..." />
+      <button>Search</button>
     </div>
-  </div>
+    <p class="launch-msg">🚀 Our AI Shopping Assistant is launching soon — Stay tuned!</p>
 
-  <div class="products">
-    <div class="section-title">根据您喜好推荐 / Recommended for You / Recommandé pour vous</div>
-    <div class="product-grid">
-      <div class="product-card">鞋子<br>Shoes<br>Chaussures<br>¥299</div>
-      <div class="product-card">耳机<br>Headphones<br>Casque<br>¥999</div>
-      <div class="product-card">手机<br>Phone<br>Téléphone<br>¥5499</div>
-      <div class="product-card">音箱<br>Speaker<br>Enceinte<br>¥99</div>
-    </div>
+    <section class="features">
+      <div class="feature">
+        <img src="https://img.icons8.com/ios-filled/50/star.png" alt="Recommendation" />
+        <h3>Personalized Recommendations</h3>
+        <p>不拘灰质醒<br />Recommendations personnalisées</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/ios-filled/50/price-tag.png" alt="Price Tracking" />
+        <h3>Price Tracking</h3>
+        <p>价格追踪<br />Suivi des prix</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/ios-filled/50/todo-list.png" alt="Shopping Lists" />
+        <h3>Shopping Lists</h3>
+        <p>购物清单<br />Listes de courses</p>
+      </div>
+    </section>
 
-    <div class="section-title" style="margin-top:3rem;">精选热推 / Popular Picks / Sélections populaires</div>
-    <div class="product-grid">
-      <div class="product-card">手提包<br>Handbag<br>Sac à main<br>¥1260</div>
-      <div class="product-card">笔记本电脑<br>Laptop<br>Ordinateur<br>¥7999</div>
-      <div class="product-card">智能手表<br>Smartwatch<br>Montre connectée<br>¥1499</div>
-    </div>
-  </div>
+    <section class="pro">
+      <div class="pro-box">
+        <h4>Coming Soon: Pro Features</h4>
+        <p>Exclusive tools to enhance your shopping experience.</p>
+      </div>
+      <div class="pro-box">
+        <h4>Pure AI-Driven Solution</h4>
+        <p>Integrated across platforms to provide seamless assistance.</p>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    ShoppingxAI - 纯AI自驱，全球智能购物平台 / Global AI-powered Shopping Platform / Plateforme d'achat IA autonome
+    <p>© 2025 ShoppingxAI. All rights reserved.</p>
   </footer>
 </body>
 </html>
