@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShoppingxAI - Your AI Shopping Assistant</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      width: 100%;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .logo .blue {
+      color: #007BFF;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #222;
+    }
+    nav select {
+      padding: 4px;
+      margin-left: 1rem;
+    }
+    main {
+      text-align: center;
+      padding: 3rem 1rem;
+      max-width: 900px;
+    }
+    .search-box {
+      margin-top: 1.5rem;
+    }
+    .search-box input {
+      padding: 0.5rem;
+      width: 250px;
+      font-size: 1rem;
+    }
+    .search-box button {
+      padding: 0.55rem 1rem;
+      margin-left: 0.5rem;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .launch-msg {
+      margin-top: 2rem;
+      color: red;
+      font-weight: bold;
+    }
+    .features {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 3rem;
+    }
+    .feature {
+      text-align: center;
+      width: 250px;
+      margin: 1rem;
+    }
+    .feature img {
+      height: 40px;
+      margin-bottom: 1rem;
+    }
+    .pro {
+      margin-top: 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 2rem;
+    }
+    .pro-box {
+      background: #f8f8f8;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      max-width: 350px;
+    }
+    footer {
+      margin-top: 4rem;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><span class="blue">SHOPPING x AI</span></div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Features</a>
+      <a href="#">Pricing</a>
+      <a href="#">Log In</a>
+      <select id="lang-switch">
+        <option>English</option>
+        <option>中文</option>
+        <option>Français</option>
+      </select>
+    </nav>
+  </header>
+
+  <main>
+    <h1>The AI-Powered Shopping Assistant</h1>
+    <p>Find the products you need with ease.</p>
+    <div class="search-box">
+      <input type="text" placeholder="Ask anything..." />
+      <button>Search</button>
+    </div>
+    <p class="launch-msg">🚀 Our AI Shopping Assistant is launching soon — Stay tuned!</p>
+
+    <section class="features">
+      <div class="feature">
+        <img src="https://img.icons8.com/ios-filled/50/star.png" alt="Recommendation" />
+        <h3>Personalized Recommendations</h3>
+        <p>个性化推荐<br />Recommendations personnalisées</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/ios-filled/50/price-tag.png" alt="Price Tracking" />
+        <h3>Price Tracking</h3>
+        <p>价格追踪<br />Suivi des prix</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/ios-filled/50/todo-list.png" alt="Shopping Lists" />
+        <h3>Shopping Lists</h3>
+        <p>购物清单<br />Listes de courses</p>
+      </div>
+    </section>
+
+    <section class="pro">
+      <div class="pro-box">
+        <h4>Coming Soon: Pro Features</h4>
+        <p>Exclusive tools to enhance your shopping experience.</p>
+      </div>
+      <div class="pro-box">
+        <h4>Pure AI-Driven Solution</h4>
+        <p>Integrated across platforms to provide seamless assistance.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 ShoppingxAI. All rights reserved.</p>
+  </footer>
+</body>
+</html>
